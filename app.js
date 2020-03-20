@@ -6,13 +6,7 @@ var server_port = 8080;
 var server_ip_address = '0.0.0.0';
 
 app.get('/', function(req, res) {
-
-	res.end('Hello YouTube!');
-
-});
-
-app.get('/downloadFile/', (req, res) => {
-  res.download('./demo.txt');
+	 res.download('./demo.txt');
 });
 
 // server listens in on port
