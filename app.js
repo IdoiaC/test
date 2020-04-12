@@ -5,9 +5,9 @@ var app = express();
 var server_port = 8080;
 var server_ip_address = '0.0.0.0';
 
-app.get('/:id', function(req,res) {
-	var buffer = Buffer.alloc(parseInt(req.params.id,10),5);
-	res.send(buffer);
+app.get('/', function(req,res) {
+// 	var buffer = Buffer.alloc(parseInt(req.params.id,10),5);
+	res.end("hi");
 });
 
 // server listens in on port
