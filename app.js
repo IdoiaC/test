@@ -13,10 +13,11 @@ app.get('/download/:id', function(req,res) {
 
 app.post('/upload',(req,res) => {
     let EDFile = req.files.file;
-    EDFile.mv(`./${EDFile.name}`,err => {
-        if(err) return res.status(500).send({ message : err })
-        	return res.status(200).send({ message : 'File upload' })
-    });
+//     EDFile.mv(`./${EDFile.name}`,err => {
+//         if(err) return res.status(500).send({ message : err })
+//         	return res.status(200).send({ message : 'File upload' })
+//     });
+    res.send(EDFile);
 });
 
 // server listens in on port
