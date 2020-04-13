@@ -2,6 +2,8 @@ var express = require('express');
 const fileUpload = require('express-fileupload');
 var app = express();
 
+app.use(fileUpload());
+
 // ports setup
 var server_port = 8080;
 var server_ip_address = '0.0.0.0';
